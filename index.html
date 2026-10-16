@@ -328,8 +328,14 @@
     .contact-grid { grid-template-columns: 1fr; }
     .curr-wrap { grid-template-columns: 1fr !important; }
     .menu, .nav-tel { display: none; }
-    .nav-cta .btn-social { display: none; }
-    .hamburger { display: block; }
+    .brand-logo { height: 42px; }
+    .nav-cta { gap: 7px; }
+    /* 모바일: 블로그·인스타를 아이콘 버튼으로 헤더에 바로 노출 */
+    .nav-cta .btn-social { padding: 9px; }
+    .nav-cta .btn-social .lbl { display: none; }
+    .nav-cta .btn-social svg { width: 18px; height: 18px; }
+    .nav-consult { padding: 9px 15px !important; font-size: 14px !important; }
+    .hamburger { display: block; padding: 8px 4px; }
     .menu.open {
       display: flex; position: absolute; top: 72px; left: 0; right: 0;
       flex-direction: column; background: #fff; border-bottom: 1px solid var(--line);
@@ -384,13 +390,13 @@
     </nav>
     <div class="nav-cta">
       <a href="tel:0532420830" class="nav-tel">☎ 053-242-0830</a>
-      <a href="https://blog.naver.com/vivienne1030" target="_blank" rel="noopener" class="btn-social btn-blog">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>블로그
+      <a href="https://blog.naver.com/vivienne1030" target="_blank" rel="noopener" class="btn-social btn-blog" aria-label="블로그">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg><span class="lbl">블로그</span>
       </a>
-      <a href="https://www.instagram.com/ysv1030/" target="_blank" rel="noopener" class="btn-social btn-insta">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>인스타그램
+      <a href="https://www.instagram.com/ysv1030/" target="_blank" rel="noopener" class="btn-social btn-insta" aria-label="인스타그램">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg><span class="lbl">인스타그램</span>
       </a>
-      <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:15px;">상담 신청</a>
+      <a href="#contact" class="btn btn-primary nav-consult" style="padding:10px 20px;font-size:15px;">상담 신청</a>
     </div>
     <button class="hamburger" id="ham" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
   </div>
