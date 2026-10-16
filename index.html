@@ -247,6 +247,33 @@
   .note-box p { color: var(--muted); font-size: 15.3px; }
   .kbd { display: inline-block; background: var(--blue); color: #fff; font-weight: 700; font-size: 13.5px; padding: 3px 12px; border-radius: 7px; margin: 0 2px; }
 
+  /* ---------- 수업 현장 갤러리 ---------- */
+  .gallery {
+    margin-top: 46px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  }
+  .gallery figure {
+    position: relative; margin: 0; border-radius: 14px; overflow: hidden;
+    box-shadow: var(--shadow); background: #000; aspect-ratio: 4 / 3;
+  }
+  .gallery figure.wide { grid-column: span 2; aspect-ratio: 16 / 9; }
+  .gallery img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform .4s ease;
+  }
+  .gallery figure:hover img { transform: scale(1.06); }
+  .gallery figcaption {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 26px 18px 14px; color: #fff; font-size: 14.5px; font-weight: 600;
+    background: linear-gradient(transparent, rgba(0,0,0,.6)); opacity: 0;
+    transition: opacity .25s ease;
+  }
+  .gallery figure:hover figcaption { opacity: 1; }
+  @media (max-width: 760px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .gallery figure.wide { grid-column: span 2; }
+  }
+
   /* ---------- Contact ---------- */
   #contact { background: var(--bg-soft); }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 46px; }
@@ -343,6 +370,7 @@
       <a href="#hours">수업 시간</a>
       <a href="#classes">반 편성</a>
       <a href="#curriculum">커리큘럼</a>
+      <a href="#gallery">수업 현장</a>
       <a href="#contact">오시는 길</a>
       <div class="menu-social">
         <a href="https://blog.naver.com/vivienne1030" target="_blank" rel="noopener" class="btn-social btn-blog">
@@ -607,6 +635,39 @@
   </div>
 </section>
 
+<!-- ===== 수업 현장 갤러리 ===== -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">CLASS GALLERY</span>
+      <h2 class="sec-title">연세브이의 수업 현장</h2>
+      <p class="sec-lead">집중하는 분위기 속에서, 한 명 한 명 꼼꼼히 관리합니다.</p>
+    </div>
+    <div class="gallery">
+      <figure class="wide">
+        <img src="images/class1.jpg" alt="연세브이영어학원 수업 현장 - 집중 수업" loading="lazy" />
+        <figcaption>집중도 높은 소수정예 수업</figcaption>
+      </figure>
+      <figure>
+        <img src="images/class4.jpg" alt="연세브이영어학원 개인 학습 공간" loading="lazy" />
+        <figcaption>1:1 관리 학습</figcaption>
+      </figure>
+      <figure>
+        <img src="images/class5.jpg" alt="연세브이영어학원 참여형 수업" loading="lazy" />
+        <figcaption>적극적인 참여 수업</figcaption>
+      </figure>
+      <figure>
+        <img src="images/class2.jpg" alt="연세브이영어학원 독해 수업" loading="lazy" />
+        <figcaption>체계적인 독해·문법 수업</figcaption>
+      </figure>
+      <figure class="wide">
+        <img src="images/class3.jpg" alt="연세브이영어학원 실전 수업" loading="lazy" />
+        <figcaption>실전 대비 수업</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ===== Contact ===== -->
 <section id="contact">
   <div class="wrap">
@@ -710,6 +771,7 @@
           <a href="#hours">수업 시간</a>
           <a href="#classes">반 편성</a>
           <a href="#curriculum">커리큘럼</a>
+          <a href="#gallery">수업 현장</a>
           <a href="#contact">오시는 길</a>
         </div>
         <div class="foot-col">
