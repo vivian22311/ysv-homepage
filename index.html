@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>연세브이영어학원 | 대구 달서구 초·중·고 영어 전문</title>
+<meta name="description" content="연세브이영어학원(YSV) — 대구 달서구 초·중·고 영어 전문 학원. 학년·수준별 맞춤 수업 시간과 수요일 맞춤 관리로 한 명도 놓치지 않습니다. 상담 053-242-0830" />
+<meta property="og:title" content="연세브이영어학원 | 한 명도 놓치지 않는 맞춤 관리" />
+<meta property="og:description" content="대구 달서구 초·중·고 영어 전문. 학년별 맞춤 수업 시간, 수요일 맞춤 관리." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="logo.jpg" />
+<link rel="icon" type="image/jpeg" href="logo.jpg" />
+<style>
+  :root {
+    /* 학원 안내자료 색상에 맞춘 브랜드 팔레트 */
+    --navy: #16307a;
+    --navy-deep: #0f2360;
+    --blue: #2f6bf0;
+    --blue-light: #5b8cf7;
+    --blue-pale: #eaf0ff;
+    --orange: #f08030;      /* 수요일 맞춤 관리 포인트 */
+    --orange-pale: #fff4ea;
+    --green: #1f9d76;
+    --purple: #7b5cf0;
+    --red: #e04b5a;
+    --ink: #1a2230;
+    --muted: #5f6b7d;
+    --line: #e4e9f2;
+    --bg: #ffffff;
+    --bg-soft: #f4f7fd;
+    --radius: 16px;
+    --shadow: 0 8px 26px rgba(22, 48, 122, 0.07);
+    --shadow-lg: 0 20px 48px rgba(22, 48, 122, 0.14);
+    --max: 1140px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+      "Malgun Gothic", "맑은 고딕", sans-serif;
+    color: var(--ink); background: var(--bg); line-height: 1.65;
+    -webkit-font-smoothing: antialiased; word-break: keep-all;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+  section { padding: 88px 0; }
+
+  .eyebrow {
+    display: inline-block; font-size: 13px; font-weight: 700;
+    letter-spacing: .16em; color: var(--blue); margin-bottom: 13px;
+  }
+  .sec-title {
+    font-size: clamp(26px, 3.6vw, 38px); font-weight: 800;
+    color: var(--navy); letter-spacing: -0.025em; line-height: 1.3;
+  }
+  .sec-lead { margin-top: 15px; color: var(--muted); font-size: 17px; max-width: 660px; }
+  .center { text-align: center; }
+  .center .sec-lead { margin-left: auto; margin-right: auto; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    font-weight: 700; font-size: 16px; padding: 14px 26px; border-radius: 999px;
+    transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+    cursor: pointer; border: none; font-family: inherit;
+  }
+  .btn-primary { background: var(--orange); color: #fff; box-shadow: 0 8px 22px rgba(240,128,48,.34); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(240,128,48,.44); }
+  .btn-ghost { background: rgba(255,255,255,.12); color: #fff; border: 1.5px solid rgba(255,255,255,.55); }
+  .btn-ghost:hover { background: rgba(255,255,255,.22); }
+  .btn-blue { background: var(--blue); color:#fff; box-shadow: 0 8px 22px rgba(47,107,240,.3); }
+  .btn-blue:hover { transform: translateY(-2px); }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; color: var(--navy); font-size: 19px; letter-spacing: -.03em; }
+  .brand small { display: block; font-size: 10.5px; font-weight: 700; color: var(--muted); letter-spacing: .14em; }
+  .brand-logo { height: 50px; width: auto; display: block; }
+  .logo-box { width: 42px; height: 42px; flex-shrink: 0; }
+  .logo-box img { width: 100%; height: 100%; object-fit: contain; border-radius: 10px; }
+  .logo-mark {
+    width: 42px; height: 42px; border-radius: 11px;
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    color: #fff; display: grid; place-items: center;
+    font-weight: 800; font-size: 15px; letter-spacing: -.02em;
+  }
+  .menu { display: flex; gap: 28px; align-items: center; }
+  .menu a { font-weight: 600; color: var(--ink); font-size: 15.5px; }
+  .menu a:hover { color: var(--blue); }
+  .nav-cta { display: flex; align-items: center; gap: 13px; }
+  .nav-tel { font-weight: 800; color: var(--navy); font-size: 16px; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .hamburger span { display: block; width: 24px; height: 2.5px; background: var(--navy); margin: 5px 0; border-radius: 2px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative; color: #fff;
+    background:
+      radial-gradient(900px 460px at 82% -8%, rgba(91,140,247,.5), transparent 62%),
+      linear-gradient(150deg, var(--navy-deep) 0%, var(--navy) 48%, #2a55c0 100%);
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 10% 84%, rgba(240,128,48,.2), transparent 24%);
+    pointer-events: none;
+  }
+  .hero .wrap { position: relative; z-index: 2; padding-top: 92px; padding-bottom: 96px; }
+  .hero .loc {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28);
+    padding: 7px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; color: #e6eeff;
+    margin-bottom: 22px;
+  }
+  .hero h1 { font-size: clamp(30px, 5vw, 54px); font-weight: 800; line-height: 1.24; letter-spacing: -.035em; max-width: 720px; }
+  .hero h1 .hl { color: #ffc47a; }
+  .hero p.sub { margin-top: 20px; font-size: clamp(16px, 2vw, 19px); color: #ccdaf5; max-width: 580px; }
+  .hero-actions { margin-top: 34px; display: flex; gap: 13px; flex-wrap: wrap; }
+  .hero-badges { margin-top: 48px; display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-badges .b {
+    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+    border-radius: 13px; padding: 16px 22px; min-width: 150px;
+  }
+  .hero-badges .b strong { display: block; font-size: 21px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
+  .hero-badges .b span { font-size: 13.5px; color: #b6c8e8; }
+
+  /* ---------- Features ---------- */
+  .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 30px 26px; box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+  .card .ic {
+    width: 50px; height: 50px; border-radius: 13px; display: grid; place-items: center;
+    background: var(--blue-pale); font-size: 24px; margin-bottom: 16px;
+  }
+  .card.hot .ic { background: var(--orange-pale); }
+  .card h3 { font-size: 18.5px; color: var(--navy); margin-bottom: 8px; letter-spacing: -.02em; }
+  .card p { color: var(--muted); font-size: 15.3px; }
+
+  /* ---------- 수업 시간 운영 ---------- */
+  #hours { background: var(--bg-soft); }
+  .hours-list { margin-top: 46px; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); overflow: hidden; }
+  .hours-row {
+    display: flex; align-items: center; justify-content: space-between; gap: 18px;
+    padding: 26px 32px; border-bottom: 1px solid var(--line); flex-wrap: wrap;
+  }
+  .hours-row:last-child { border-bottom: none; }
+  .hours-row .t strong { display: block; font-size: 20px; font-weight: 800; color: var(--navy); letter-spacing: -.02em; }
+  .hours-row .t span { font-size: 14.5px; color: var(--muted); }
+  .pill {
+    background: var(--blue-pale); color: var(--navy); font-weight: 800; font-size: 17px;
+    padding: 12px 24px; border-radius: 12px; white-space: nowrap;
+  }
+
+  /* ---------- 반 편성 ---------- */
+  .div-tabs { display: flex; gap: 10px; justify-content: center; margin-top: 42px; flex-wrap: wrap; }
+  .tab {
+    padding: 12px 28px; border-radius: 999px; font-weight: 700; font-size: 15.5px;
+    background: #fff; color: var(--muted); border: 1.5px solid var(--line); cursor: pointer;
+    font-family: inherit; transition: .18s;
+  }
+  .tab.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .panel { display: none; margin-top: 34px; }
+  .panel.active { display: block; }
+
+  .class-card {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 28px 30px; margin-bottom: 18px;
+  }
+  .class-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+  .class-head h3 { font-size: 21px; color: var(--navy); font-weight: 800; letter-spacing: -.025em; }
+  .tag {
+    font-size: 13.5px; font-weight: 800; padding: 7px 15px; border-radius: 999px;
+    background: var(--blue-pale); color: var(--blue); white-space: nowrap;
+  }
+  .tag.g { background: #e6f7f1; color: var(--green); }
+
+  .days { display: grid; grid-template-columns: repeat(5, 1fr); gap: 9px; }
+  .day {
+    text-align: center; padding: 16px 4px; border-radius: 11px;
+    font-weight: 800; font-size: 16px; line-height: 1.3;
+  }
+  .day.on { background: var(--blue); color: #fff; }
+  .day.care { background: var(--orange); color: #fff; }
+  .day.care em { display: block; font-size: 11px; font-weight: 600; font-style: normal; opacity: .92; }
+  .day.off { background: #eef1f7; color: #b3bdcc; }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--line); font-size: 13.5px; color: var(--muted); }
+  .legend i { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+
+  /* 교시 구성 */
+  .periods { margin-top: 4px; }
+  .p-group { margin-bottom: 22px; }
+  .p-group:last-child { margin-bottom: 0; }
+  .p-group .glabel { font-weight: 800; color: var(--blue); font-size: 16px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .p-group .glabel::before { content: "●"; font-size: 10px; }
+  .p-row { display: flex; align-items: center; gap: 14px; padding: 11px 0; border-bottom: 1px solid #f0f3f8; }
+  .p-row:last-child { border-bottom: none; }
+  .p-no { background: #eef2f8; color: var(--muted); font-size: 13px; font-weight: 700; padding: 6px 13px; border-radius: 8px; white-space: nowrap; }
+  .p-name { font-weight: 800; font-size: 17px; letter-spacing: -.02em; }
+  .c-grammar { color: var(--blue); }
+  .c-reading { color: var(--green); }
+  .c-speak   { color: var(--purple); }
+  .c-test    { color: var(--red); }
+
+  /* 수요일 관리 박스 */
+  .care-box {
+    background: var(--orange-pale); border: 1px solid #ffdfc2;
+    border-radius: var(--radius); padding: 30px 30px; margin-top: 24px;
+  }
+  .care-box .badge {
+    display: inline-block; background: var(--orange); color: #fff;
+    font-size: 13.5px; font-weight: 800; padding: 7px 16px; border-radius: 999px; margin-bottom: 16px;
+  }
+  .care-box h3 { font-size: 22px; color: #a5511a; letter-spacing: -.03em; margin-bottom: 6px; }
+  .care-box p.d { color: #9a6134; font-size: 15.5px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 18px; }
+  .chip {
+    background: #fff; border: 1.5px solid #ffd0a5; color: #c1651f;
+    font-weight: 700; font-size: 14.5px; padding: 9px 18px; border-radius: 10px;
+  }
+  .care-box .out { color: #9a6134; font-size: 15px; font-weight: 600; }
+
+  .note-box {
+    background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--blue);
+    border-radius: 12px; padding: 22px 26px; margin-top: 20px;
+  }
+  .note-box h4 { color: var(--navy); font-size: 16.5px; margin-bottom: 7px; }
+  .note-box p { color: var(--muted); font-size: 15.3px; }
+  .kbd { display: inline-block; background: var(--blue); color: #fff; font-weight: 700; font-size: 13.5px; padding: 3px 12px; border-radius: 7px; margin: 0 2px; }
+
+  /* ---------- Contact ---------- */
+  #contact { background: var(--bg-soft); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 46px; }
+  .info-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px 30px; }
+  .info-card h3 { font-size: 21px; color: var(--navy); margin-bottom: 22px; }
+  .i-row { display: flex; gap: 14px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+  .i-row:last-of-type { border-bottom: none; }
+  .i-row .ic { font-size: 20px; width: 26px; flex-shrink: 0; }
+  .i-row .tx strong { display: block; font-size: 14px; color: var(--muted); font-weight: 700; margin-bottom: 3px; }
+  .i-row .tx p { font-size: 16px; color: var(--ink); font-weight: 600; }
+  .i-row .tx p.big { font-size: 20px; font-weight: 800; color: var(--navy); letter-spacing: -.02em; }
+  .map-btns { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+  .map-btns .btn { flex: 1; min-width: 140px; font-size: 15px; padding: 13px 18px; }
+
+  form { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px 30px; }
+  form h3 { font-size: 21px; color: var(--navy); margin-bottom: 5px; }
+  form p.f-lead { color: var(--muted); font-size: 14.5px; margin-bottom: 20px; }
+  .field { margin-bottom: 15px; }
+  .field label { display: block; font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 7px; }
+  .field input, .field select, .field textarea {
+    width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 10px;
+    font-size: 15px; font-family: inherit; color: var(--ink); background: #fdfdfe; transition: border .15s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--blue); }
+  .field textarea { resize: vertical; min-height: 88px; }
+  .field.two { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+  form .btn { width: 100%; margin-top: 6px; }
+  .consent { font-size: 12.5px; color: var(--muted); margin-top: 12px; text-align: center; }
+
+  /* ---------- Footer ---------- */
+  footer { background: var(--navy-deep); color: #cdd9ea; padding: 52px 0 28px; }
+  .foot-top { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+  .foot-brand { display: flex; align-items: center; gap: 12px; color: #fff; font-weight: 800; font-size: 19px; }
+  .foot-logo-chip { background: #fff; border-radius: 10px; padding: 6px 8px; display: inline-flex; }
+  .foot-logo-chip img { height: 40px; width: auto; display: block; }
+  .foot-col h4 { color: #fff; font-size: 14px; margin-bottom: 12px; letter-spacing: .04em; }
+  .foot-col a, .foot-col p { display: block; color: #a3b3cd; font-size: 14.5px; margin: 6px 0; }
+  .foot-col a:hover { color: #fff; }
+  .foot-links { display: flex; gap: 54px; flex-wrap: wrap; }
+  .foot-bottom {
+    margin-top: 38px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12);
+    font-size: 13px; color: #7e90aa; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  }
+
+  /* 모바일 하단 고정 전화 버튼 */
+  .callbar { display: none; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .feat-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .curr-wrap { grid-template-columns: 1fr !important; }
+    .menu, .nav-tel { display: none; }
+    .hamburger { display: block; }
+    .menu.open {
+      display: flex; position: absolute; top: 72px; left: 0; right: 0;
+      flex-direction: column; background: #fff; border-bottom: 1px solid var(--line);
+      padding: 14px 22px 20px; gap: 0;
+    }
+    .menu.open a { padding: 12px 0; border-bottom: 1px solid var(--line); width: 100%; }
+    section { padding: 64px 0; }
+    .hours-row { flex-direction: column; align-items: flex-start; }
+    body { padding-bottom: 68px; }
+    .callbar {
+      display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
+      background: #fff; border-top: 1px solid var(--line); padding: 10px 14px; gap: 9px;
+      box-shadow: 0 -4px 18px rgba(0,0,0,.07);
+    }
+    .callbar a { flex: 1; border-radius: 12px; font-size: 15.5px; padding: 13px 10px; }
+  }
+  @media (max-width: 560px) {
+    .field.two { grid-template-columns: 1fr; }
+    .days { grid-template-columns: repeat(5, 1fr); gap: 6px; }
+    .day { font-size: 14px; padding: 13px 2px; }
+    .class-card { padding: 24px 20px; }
+    .care-box { padding: 26px 22px; }
+    .hero-badges .b { min-width: calc(50% - 8px); padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="brand" aria-label="연세브이영어학원 홈">
+      <img class="brand-logo" src="logo.jpg" alt="연세브이영어학원 로고" />
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#about">학원 소개</a>
+      <a href="#hours">수업 시간</a>
+      <a href="#classes">반 편성</a>
+      <a href="#curriculum">커리큘럼</a>
+      <a href="#contact">오시는 길</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:0532420830" class="nav-tel">☎ 053-242-0830</a>
+      <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:15px;">상담 신청</a>
+    </div>
+    <button class="hamburger" id="ham" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home" style="padding:0;">
+  <div class="wrap">
+    <span class="loc">📍 대구 달서구 · 초 · 중 · 고 영어 전문</span>
+    <h1>한 명도 놓치지 않는<br><span class="hl">맞춤 관리</span></h1>
+    <p class="sub">학생의 학년과 수준에 따라 수업 시간이 다르게 운영됩니다. 한 명 한 명의 성장을 위한 YSV의 맞춤 커리큘럼입니다.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">무료 레벨테스트 신청</a>
+      <a href="#curriculum" class="btn btn-ghost">커리큘럼 보기</a>
+    </div>
+    <div class="hero-badges">
+      <div class="b"><strong>학년별 맞춤</strong><span>40 · 45 · 50분 수업</span></div>
+      <div class="b"><strong>수요일 원서 읽기</strong><span>읽는 영어의 힘</span></div>
+      <div class="b"><strong>매 수업 테스트</strong><span>끝까지 책임 마무리</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">WHY YSV</span>
+      <h2 class="sec-title">연세브이가 아이를 관리하는 방식</h2>
+      <p class="sec-lead">진도만 나가는 수업이 아닙니다. 아이마다 부족한 부분을 찾아 끝까지 채웁니다.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="card">
+        <div class="ic">⏱️</div>
+        <h3>학년별 맞춤 수업 시간</h3>
+        <p>초등 저학년 40분, 초등 고학년 45분, 중·고등 50분. 집중할 수 있는 만큼만, 필요한 만큼 충분히 수업합니다.</p>
+      </div>
+      <div class="card hot">
+        <div class="ic">📖</div>
+        <h3>초등, 수요일은 원서 읽기</h3>
+        <p>초등부 수요일은 새 진도 대신 영어 원서를 읽습니다. 읽는 즐거움 속에서 독해력과 어휘가 자연스럽게 자랍니다.</p>
+      </div>
+      <div class="card">
+        <div class="ic">📝</div>
+        <h3>매 수업 테스트</h3>
+        <p>모든 수업의 마지막 교시는 테스트입니다. 배운 내용을 그날 확인하고 넘어가야 실력이 쌓입니다.</p>
+      </div>
+      <div class="card hot">
+        <div class="ic">✅</div>
+        <h3>중·고등, 테스트 마무리</h3>
+        <p>평일 수업에서 마무리하지 못한 테스트는 수요일·토요일에 끝냅니다. 배운 내용을 반드시 확인하고 넘어갑니다.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🗣️</div>
+        <h3>말하고 듣는 영어</h3>
+        <p>초등부는 매 수업 Speaking &amp; Listening 교시를 운영합니다. 문법과 독해에만 갇히지 않는 영어를 배웁니다.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🎯</div>
+        <h3>중·고등 내신·수능 대비</h3>
+        <p>문법과 독해를 축으로 매 수업 실전 감각을 쌓고, 테스트로 확인하며 내신과 수능을 함께 준비합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 수업 시간 운영 ===== -->
+<section id="hours">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">CLASS HOURS</span>
+      <h2 class="sec-title">학년별 수업 시간</h2>
+      <p class="sec-lead">학생의 학년과 수준에 따라 교시 수와 수업 길이가 다르게 운영됩니다.</p>
+    </div>
+    <div class="hours-list">
+      <div class="hours-row">
+        <div class="t"><strong>초등 저학년</strong><span>기초를 탄탄하게</span></div>
+        <div class="pill">40분 × 2교시</div>
+      </div>
+      <div class="hours-row">
+        <div class="t"><strong>초등 고학년</strong><span>실력의 도약</span></div>
+        <div class="pill">45분 × 3교시</div>
+      </div>
+      <div class="hours-row">
+        <div class="t"><strong>중등 · 고등</strong><span>심화와 실전까지</span></div>
+        <div class="pill">50분 × 3교시</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 반 편성 ===== -->
+<section id="classes">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">CLASS SCHEDULE</span>
+      <h2 class="sec-title">반 편성 안내</h2>
+      <p class="sec-lead">수요일을 포함해 반이 편성됩니다. 자세한 반 배정은 레벨테스트 후 안내드립니다.</p>
+    </div>
+
+    <div class="div-tabs">
+      <button class="tab active" data-tab="elem">초등부</button>
+      <button class="tab" data-tab="high">중등 · 고등부</button>
+    </div>
+
+    <!-- 초등부 -->
+    <div class="panel active" id="elem">
+      <div class="class-card">
+        <div class="class-head">
+          <h3>월 · 화 · 수 · 목반</h3>
+          <span class="tag g">주 4회 · 2교시</span>
+        </div>
+        <div class="days">
+          <div class="day on">월</div>
+          <div class="day on">화</div>
+          <div class="day care">수<em>관리</em></div>
+          <div class="day on">목</div>
+          <div class="day off">금</div>
+        </div>
+      </div>
+
+      <div class="class-card">
+        <div class="class-head">
+          <h3>월 · 수 · 목반</h3>
+          <span class="tag">주 3회 · 3교시</span>
+        </div>
+        <div class="days">
+          <div class="day on">월</div>
+          <div class="day off">화</div>
+          <div class="day care">수<em>관리</em></div>
+          <div class="day on">목</div>
+          <div class="day off">금</div>
+        </div>
+      </div>
+
+      <div class="class-card">
+        <div class="class-head">
+          <h3>화 · 수 · 금반</h3>
+          <span class="tag">주 3회 · 3교시</span>
+        </div>
+        <div class="days">
+          <div class="day off">월</div>
+          <div class="day on">화</div>
+          <div class="day care">수<em>관리</em></div>
+          <div class="day off">목</div>
+          <div class="day on">금</div>
+        </div>
+        <div class="legend">
+          <span><i style="background:var(--blue)"></i>진도 수업일</span>
+          <span><i style="background:var(--orange)"></i>수요일 · 맞춤 관리</span>
+          <span><i style="background:#eef1f7"></i>미등원</span>
+        </div>
+      </div>
+
+      <!-- 수요일 원서 읽기 -->
+      <div class="care-box">
+        <span class="badge">수요일 · 원서 읽기</span>
+        <h3>수요일은 영어 원서를 읽는 날입니다</h3>
+        <p class="d">새로운 진도 대신, 아이가 자기 수준에 맞는 영어책을 읽습니다.</p>
+        <div class="chips">
+          <span class="chip">수준별 영어 원서</span>
+          <span class="chip">읽기 습관 만들기</span>
+          <span class="chip">어휘 자연 확장</span>
+          <span class="chip">독해력 향상</span>
+          <span class="chip">개별 리딩 피드백</span>
+        </div>
+        <p class="out">읽는 즐거움이 곧 실력이 됩니다.<br>수요일은 아이가 영어와 친해지는 시간입니다.</p>
+      </div>
+    </div>
+
+    <!-- 중고등부 -->
+    <div class="panel" id="high">
+      <div class="class-card">
+        <div class="class-head">
+          <h3>중등 · 고등부</h3>
+          <span class="tag">주 2회 · 3교시 (50분)</span>
+        </div>
+        <p style="color:var(--muted); font-size:15.5px;">
+          주 2회 수업으로 문법 · 독해 · 테스트를 집중 운영합니다. 요일은 학생의 학교 일정과 수준에 맞추어 배정됩니다.
+        </p>
+      </div>
+
+      <div class="note-box">
+        <h4>📌 수요일 · 토요일은 테스트 마무리</h4>
+        <p>중·고등부는 평일 수업에서 <b>마무리하지 못한 테스트</b>를 <span class="kbd">수요일</span> <span class="kbd">토요일</span> 중 가능한 시간에 추가로 등원하여 끝냅니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 커리큘럼 (교시 구성) ===== -->
+<section id="curriculum" style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">CURRICULUM</span>
+      <h2 class="sec-title">요일별 교시 구성</h2>
+      <p class="sec-lead">매 수업 마지막 교시는 테스트입니다. 그날 배운 것은 그날 확인합니다.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:46px;" class="curr-wrap">
+      <!-- 초등부 -->
+      <div class="class-card" style="margin-bottom:0;">
+        <div class="class-head">
+          <h3>초등부 3교시 구성</h3>
+          <span class="tag">문법 · 독해 · S&amp;L · 테스트</span>
+        </div>
+        <div class="periods">
+          <div class="p-group">
+            <div class="glabel">월요일 · 화요일</div>
+            <div class="p-row"><span class="p-no">1교시</span><span class="p-name c-grammar">문법</span></div>
+            <div class="p-row"><span class="p-no">2교시</span><span class="p-name c-speak">Speaking &amp; Listening</span></div>
+            <div class="p-row"><span class="p-no">3교시</span><span class="p-name c-test">테스트</span></div>
+          </div>
+          <div class="p-group" style="border-top:1px solid var(--line); padding-top:20px;">
+            <div class="glabel">목요일 · 금요일</div>
+            <div class="p-row"><span class="p-no">1교시</span><span class="p-name c-reading">독해</span></div>
+            <div class="p-row"><span class="p-no">2교시</span><span class="p-name c-speak">Speaking &amp; Listening</span></div>
+            <div class="p-row"><span class="p-no">3교시</span><span class="p-name c-test">테스트</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 중고등부 -->
+      <div class="class-card" style="margin-bottom:0;">
+        <div class="class-head">
+          <h3>중등 · 고등부 구성</h3>
+          <span class="tag">주 2회 · 문법 · 독해 · 테스트</span>
+        </div>
+        <div class="periods">
+          <div class="p-group">
+            <div class="glabel">주 2회 수업</div>
+            <div class="p-row"><span class="p-no">1교시</span><span class="p-name c-grammar">문법</span></div>
+            <div class="p-row"><span class="p-no">2교시</span><span class="p-name c-reading">독해</span></div>
+            <div class="p-row"><span class="p-no">3교시</span><span class="p-name c-test">테스트</span></div>
+          </div>
+        </div>
+        <div class="note-box" style="margin-top:18px;">
+          <h4>📌 수요일 · 토요일은 테스트 마무리</h4>
+          <p>평일 수업에서 <b>마무리하지 못한 테스트</b>는 <span class="kbd">수요일</span> <span class="kbd">토요일</span> 중 가능한 시간에 추가로 등원하여 끝냅니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">CONTACT</span>
+      <h2 class="sec-title">오시는 길 · 상담 문의</h2>
+      <p class="sec-lead">궁금한 점은 언제든 편하게 문의해 주세요. 무료 레벨테스트로 정확히 진단해 드립니다.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="info-card">
+        <h3>학원 안내</h3>
+        <div class="i-row">
+          <span class="ic">📞</span>
+          <div class="tx">
+            <strong>대표 전화</strong>
+            <p class="big"><a href="tel:0532420830">053-242-0830</a></p>
+          </div>
+        </div>
+        <div class="i-row">
+          <span class="ic">📱</span>
+          <div class="tx">
+            <strong>휴대전화 상담</strong>
+            <p class="big"><a href="tel:01090193173">010-9019-3173</a></p>
+          </div>
+        </div>
+        <div class="i-row">
+          <span class="ic">📍</span>
+          <div class="tx">
+            <strong>주소</strong>
+            <p>대구광역시 달서구 월배로11길 32<br>401호 (대천동)</p>
+          </div>
+        </div>
+        <div class="i-row">
+          <span class="ic">🕐</span>
+          <div class="tx">
+            <strong>운영 시간</strong>
+            <p>월 ~ 금 &nbsp;13:30 ~ 22:00<br>토요일 &nbsp;09:00 ~ 16:00</p>
+          </div>
+        </div>
+        <div class="map-btns">
+          <a class="btn btn-blue" target="_blank" rel="noopener"
+             href="https://map.naver.com/p/search/%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8B%AC%EC%84%9C%EA%B5%AC%20%EC%9B%94%EB%B0%B0%EB%A1%9C11%EA%B8%B8%2032">네이버 지도</a>
+          <a class="btn btn-blue" target="_blank" rel="noopener"
+             href="https://map.kakao.com/?q=%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8B%AC%EC%84%9C%EA%B5%AC%20%EC%9B%94%EB%B0%B0%EB%A1%9C11%EA%B8%B8%2032">카카오맵</a>
+        </div>
+      </div>
+
+      <form onsubmit="return submitForm(event)">
+        <h3>무료 상담 · 레벨테스트 신청</h3>
+        <p class="f-lead">아래 정보를 남겨주시면 확인 후 연락드리겠습니다.</p>
+        <div class="field two">
+          <div>
+            <label for="name">학생 이름</label>
+            <input id="name" type="text" placeholder="예) 홍길동" required />
+          </div>
+          <div>
+            <label for="grade">학년</label>
+            <select id="grade" required>
+              <option value="">선택</option>
+              <option>초등 저학년 (1~3학년)</option>
+              <option>초등 고학년 (4~6학년)</option>
+              <option>중등</option>
+              <option>고등</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="phone">연락처</label>
+          <input id="phone" type="tel" placeholder="010-0000-0000" required />
+        </div>
+        <div class="field">
+          <label for="msg">문의 내용</label>
+          <textarea id="msg" placeholder="상담 희망 시간, 희망 반(요일), 궁금한 점 등을 자유롭게 적어주세요."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">📩 문자로 상담 신청하기</button>
+        <p class="consent">버튼을 누르면 작성한 내용이 담긴 문자 메시지가 열립니다. <b>보내기</b>만 누르시면 접수됩니다.<br>개인정보는 상담 목적으로만 사용됩니다.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <span class="foot-logo-chip">
+            <img src="logo.jpg" alt="연세브이영어학원 로고" />
+          </span>
+          연세브이영어학원
+        </div>
+        <p style="color:#a3b3cd; margin-top:14px; max-width:330px; font-size:14.5px;">
+          한 명도 놓치지 않는 맞춤 관리.<br>대구 달서구 초 · 중 · 고 영어 전문 학원.
+        </p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>바로가기</h4>
+          <a href="#about">학원 소개</a>
+          <a href="#hours">수업 시간</a>
+          <a href="#classes">반 편성</a>
+          <a href="#curriculum">커리큘럼</a>
+          <a href="#contact">오시는 길</a>
+        </div>
+        <div class="foot-col">
+          <h4>문의</h4>
+          <p>☎ 053-242-0830</p>
+          <p>📱 010-9019-3173</p>
+          <p>대구광역시 달서구 월배로11길 32<br>401호 (대천동)</p>
+          <p>월~금 13:30~22:00 / 토 09:00~16:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 연세브이영어학원. All rights reserved.</span>
+      <span>YSV ENGLISH ACADEMY</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 모바일 하단 고정 버튼 -->
+<div class="callbar">
+  <a href="tel:0532420830" class="btn btn-blue">📞 전화 상담</a>
+  <a href="#contact" class="btn btn-primary">✍️ 상담 신청</a>
+</div>
+
+<script>
+  // 모바일 메뉴
+  const ham = document.getElementById('ham');
+  const menu = document.getElementById('menu');
+  ham.addEventListener('click', () => menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  // 반 편성 탭
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  // 상담 폼 → 학원 문자(010-8693-3173)로 발송
+  var ACADEMY_SMS = '01086933173';
+  function submitForm(e) {
+    e.preventDefault();
+    var name  = document.getElementById('name').value.trim();
+    var grade = document.getElementById('grade').value;
+    var phone = document.getElementById('phone').value.trim();
+    var msg   = document.getElementById('msg').value.trim();
+
+    var body =
+      '[연세브이 상담신청]\n' +
+      '학생 이름: ' + name + '\n' +
+      '학년: ' + grade + '\n' +
+      '연락처: ' + phone +
+      (msg ? '\n문의: ' + msg : '');
+
+    // iOS는 body 앞에 '&', 그 외는 '?' 를 사용
+    var ua = navigator.userAgent || '';
+    var isApple = /iPhone|iPad|iPod|Macintosh|Mac OS X/i.test(ua);
+    var sep = isApple ? '&' : '?';
+    var url = 'sms:' + ACADEMY_SMS + sep + 'body=' + encodeURIComponent(body);
+
+    // 문자 앱이 열리지 않는 환경(일부 PC)을 위한 안내
+    var opened = false;
+    try { window.location.href = url; opened = true; } catch (err) { opened = false; }
+
+    setTimeout(function () {
+      if (!opened || !/Android|iPhone|iPad|iPod/i.test(ua)) {
+        alert('문자 앱이 열리지 않으면, 아래 내용을 복사해 010-8693-3173 으로 보내주세요.\n\n' + body);
+      }
+    }, 800);
+    return false;
+  }
+</script>
+</body>
+</html>
